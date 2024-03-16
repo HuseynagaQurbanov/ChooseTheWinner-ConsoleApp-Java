@@ -57,10 +57,11 @@ public class MenuUtil {
                         RacerRaceService.race();
                         break;
                     case 3:
-                        
+                        loginMenu();
+                        System.exit(0);
                         break;
                     case 4:
-                        
+                        System.exit(0);
                         break;
                     default:
                         System.out.println("You must enter true number!!!");
