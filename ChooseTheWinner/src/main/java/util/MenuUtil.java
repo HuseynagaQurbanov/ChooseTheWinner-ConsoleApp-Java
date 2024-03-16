@@ -2,6 +2,7 @@ package util;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import services.RacerService;
 
 public class MenuUtil {
 
@@ -38,18 +39,19 @@ public class MenuUtil {
 
         while (loop) {
             Scanner sc = new Scanner(System.in);
+            System.out.println("\n================= Main Menu =================");
             System.out.println("1. Register racers");
             System.out.println("2. Start race");
             System.out.println("3. Logout");
             System.out.println("4. Exit");
 
             try {
-                System.out.print("Select: ");
+                System.out.print("\nSelect: ");
                 int input = sc.nextInt();
 
                 switch (input) {
                     case 1:
-                        
+                        RacerService.registerRacers();
                         break;
                     case 2:
                         
