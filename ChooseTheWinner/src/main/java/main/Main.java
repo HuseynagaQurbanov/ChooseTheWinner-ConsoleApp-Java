@@ -1,6 +1,5 @@
 package main;
 
-import java.util.Scanner;
 import util.MenuUtil;
 
 public class Main {

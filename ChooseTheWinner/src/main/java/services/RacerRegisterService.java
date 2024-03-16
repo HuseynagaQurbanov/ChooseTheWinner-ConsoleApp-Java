@@ -6,10 +6,13 @@ import java.util.List;
 import java.util.Scanner;
 import util.Racer;
 
-public class RacerService {
+public class RacerRegisterService {
 
     private static List<Racer> racers = new ArrayList<>();
+    public static int racerCount = 0;
+    private static int selectedRacerCount =0;
 
+    
     public static List<Racer> getRacers() {
         return racers;
     }
@@ -18,22 +21,22 @@ public class RacerService {
         boolean loop = true;
 
         while (loop) {
-            int racerCount = 0;
             System.out.println("How many racers will participate?");
 
             Scanner sc = new Scanner(System.in);
             try {
-                racerCount = sc.nextInt();
+                selectedRacerCount = sc.nextInt();
 
-                if (racerCount < 2) {
+                if (selectedRacerCount < 2) {
                     System.out.println("You must enter minimum 2 racer!!!");
                 } else {
-                    for (int i = 0; i < racerCount; i++) {
+                    for (int i = 0; i < selectedRacerCount; i++) {
                         System.out.print(i + 1 + ". Racer: ");
                         Racer racer = new Racer();
                         String fullName = sc.next();
                         racer.setFullName(fullName);
                         racers.add(racer);
+                        racerCount++;
                     }
 
                     System.out.println("\nParticipants of the competition have successfully registered.\n");

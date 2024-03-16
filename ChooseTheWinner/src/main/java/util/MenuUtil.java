@@ -2,10 +2,10 @@ package util;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import services.RacerService;
+import services.RacerRaceService;
+import services.RacerRegisterService;
 
 public class MenuUtil {
-
     public static void loginMenu() {
         int wrongLogin = 0;
         boolean loop = true;
@@ -51,10 +51,10 @@ public class MenuUtil {
 
                 switch (input) {
                     case 1:
-                        RacerService.registerRacers();
+                        RacerRegisterService.registerRacers();
                         break;
                     case 2:
-                        
+                        RacerRaceService.race();
                         break;
                     case 3:
                         
